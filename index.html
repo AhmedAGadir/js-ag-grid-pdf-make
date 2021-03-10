@@ -1,0 +1,157 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+</script>
+
+<div class="form-wrap">
+  <form>
+    <h4 class="text-secondary">Grid Options</h4>
+    <span class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="grid-setting-column-groups"
+      />
+      <label class="form-check-label" for="grid-setting-column-groups">
+        Column Groups
+      </label>
+    </span>
+    <span class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="grid-setting-group-country"
+      />
+      <label class="form-check-label" for="grid-setting-group-country">
+        Group by "country"
+      </label>
+    </span>
+    <span class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="grid-setting-filter-argentina"
+      />
+      <label class="form-check-label" for="grid-setting-filter-argentina">
+        Filter by "Argentina"
+      </label>
+    </span>
+    <span class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="grid-setting-sort-athlete-asc"
+      />
+      <label class="form-check-label" for="grid-setting-sort-athlete-asc">
+        Sort Athlete (ascending)
+      </label>
+    </span>
+  </form>
+  <form>
+    <h4 class="text-secondary">PDF Export Options</h4>
+    <div class="mb-2">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="orientation"
+        id="landscape"
+        value="landscape"
+        checked
+      />
+      <label class="form-check-label" for="landscape">
+        Landscape
+      </label>
+      <input
+        class="form-check-input"
+        type="radio"
+        name="orientation"
+        id="portrait"
+        value="portrait"
+      />
+      <label class="form-check-label" for="portrait">
+        Portrait
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="headerImage"
+        checked
+      />
+      <label class="form-check-label" for="headerImage">
+        Header image (ag-Grid logo)
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="footerPageCount"
+        checked
+      />
+      <label class="form-check-label" for="footerPageCount">
+        Footer (page count)
+      </label>
+    </div>
+    <div class="my-2">
+      <input
+        type="number"
+        id="headerRowHeight"
+        value="25"
+        style="width: 50px"
+      />
+      <label for="headerRowHeight">Header height</label>
+    </div>
+    <div class="my-2">
+      <input type="number" id="cellRowHeight" value="15" style="width: 50px" />
+      <label for="cellRowHeight">Cell height</label>
+    </div>
+    <div class="color-picker-container">
+      <div class="color-picker-odd-row-bkg"></div>
+      <div>Odd row background color</div>
+    </div>
+    <div class="color-picker-container">
+      <div class="color-picker-even-row-bkg"></div>
+      <div>Even row background color</div>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="exportWithFormatting"
+        checked
+      />
+      <label class="form-check-label" for="exportWithFormatting">
+        Cell styles
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="exportColumnsAsLink"
+        checked
+      />
+      <label class="form-check-label" for="exportColumnsAsLink">
+        Hyperlinks
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="selectedRowsOnly" />
+      <label class="form-check-label" for="selectedRowsOnly">
+        Selected rows only
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Export to PDF</button>
+  </form>
+</div>
+
+<div class="grid-container">
+  <div id="myGrid" class="ag-theme-alpine" style="height: 100%;"></div>
+</div>
+
+<script src="build/pdfmake.min.js"></script>
+<script src="build/vfs_fonts.js"></script>
