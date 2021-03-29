@@ -2,16 +2,12 @@ import { COLDEFS_WITH_GROUPING, COLDEFS_WITHOUT_GROUPING } from "./columnDefs";
 import gridOptions from "./gridOptions";
 
 // **** DOM Elements ****
-const eColumnGroups  = document.querySelector(
-  "#grid-setting-column-groups"
-);
-const eGroupByCountry  = document.querySelector(
-  "#grid-setting-group-country"
-);
-const eFilterArgentina  = document.querySelector(
+const eColumnGroups = document.querySelector("#grid-setting-column-groups");
+const eGroupByCountry = document.querySelector("#grid-setting-group-country");
+const eFilterArgentina = document.querySelector(
   "#grid-setting-filter-argentina"
 );
-const eSortAthleteAsc  = document.querySelector(
+const eSortAthleteAsc = document.querySelector(
   "#grid-setting-sort-athlete-asc"
 );
 
@@ -37,10 +33,7 @@ function updateGroupByCountry() {
         colId: "country",
         rowGroup: eGroupByCountry.checked
       }
-    ],
-    defaultState: {
-      rowGroup: false
-    }
+    ]
   });
 }
 

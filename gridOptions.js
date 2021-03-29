@@ -1,8 +1,10 @@
-import { GridOptions, simpleHttpRequest } from "ag-grid-community";
+import { simpleHttpRequest } from "ag-grid-community";
 import MyCellRenderer from "./MyCellRenderer";
+import { COLDEFS_WITHOUT_GROUPING } from "./columnDefs";
 import GRID_OPTIONS_PANEL from "./gridOptionsPanel";
 
 const gridOptions = {
+  columnDefs: COLDEFS_WITHOUT_GROUPING,
   suppressPropertyNamesCheck: true,
   defaultColDef: {
     cellRenderer: "MyCellRenderer",
